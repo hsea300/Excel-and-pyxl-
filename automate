@@ -1,0 +1,24 @@
+#Notes taken from "https://www.youtube.com/watch?v=ueq1iTWQU5U" 
+
+import openpyxl
+openpyxl.__version__
+
+wb=openpyxl.load_workbook
+
+import os
+os #save the excel file to the end of that director so that it can be read
+
+wb=openpyxl.load_work('filename.xlsx')
+type(wb)
+wb.get_sheet_names()
+sheet=wb.get_sheet_by_name('Sheet1') #capitalization matters here 'Sheet1'
+type(sheet) #can start querying for values
+
+sheet['C1'].value
+sheet['C1'].value = 54 #changes value
+
+
+wb.save('nameoffile.xlsx') #makes a saves a new excel doc in the DLL
+
+sheet.max_row
+sheet.max_column 
